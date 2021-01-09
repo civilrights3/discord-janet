@@ -14,7 +14,8 @@ def Interpret(message):
     print('Interpreting chairman message')
     prettyMessage = message.clean_content
 
-    roleUpgradeRegex = r"@Janet (please )?(would|will) you get @([^\s]*) a chair([.])?"
+    # TODO: normalize message parsing. Remove pleasantries, normallize would/will.
+    roleUpgradeRegex = r"@Janet (please )?(would|will) you (please )?get @([^\s]*) a chair([.?])?"
     result = re.search(roleUpgradeRegex, prettyMessage)
     if result:
         return fn.promoteChairman()

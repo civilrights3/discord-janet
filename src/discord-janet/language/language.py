@@ -21,10 +21,10 @@ def Interpret(message):
         # returnResult = generic.Interpret(message) No commands exist yet. uncomment later
 
     # Default answer when we dont understand the command
-    print('Before default', returnResult)
+    # print('Before default', returnResult)
     if not returnResult:
         returnResult = MakeCommandNotFound()
-    print('After default', returnResult)
+    # print('After default', returnResult)
     return returnResult
 
 def MakeCommandNotFound():

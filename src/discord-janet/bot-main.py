@@ -1,6 +1,6 @@
 import discord
 import config
-import language
+import language.language as lang
 
 client = discord.Client()
 
@@ -12,9 +12,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if talking_to_me(message):
-        function = language.Interpret(message)
-        print('function result: ', function)
-        # await function.execute(message, client)
+        function = lang.Interpret(message)
+        # print('function result: ', function)
+        await function.execute(message, client)
 
 #Private functions
 def talking_to_me(message):
