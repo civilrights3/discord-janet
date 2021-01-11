@@ -21,8 +21,8 @@ def talking_to_me(message):
     if message.author == client.user:
         return False
 
-    print('Message Recieved - Content:', message.content)
-    print('Message Recieved - Clean Content:', message.clean_content)
+    # print('Message Recieved - Content:', message.content)
+    # print('Message Recieved - Clean Content:', message.clean_content)
 
     # Make sure the message starts with the bot's userid
     if (message.clean_content.startswith("@Janet ")):
