@@ -1,5 +1,6 @@
 import discord
 import re
+import emoji
 import functionality as fn
 import language.civilLanguage as civil
 import language.genericLanguage as generic
@@ -7,7 +8,6 @@ import language.chairmanLanguage as chairman
 
 # TODO: write a proper parsing of sentences
 def Interpret(message):
-    print('Routing interpretation')
     returnResult = None
 
     if civil.IsFromThisServer(message):
@@ -29,5 +29,5 @@ def Interpret(message):
 
 def MakeCommandNotFound():
     returnResult = fn.BotFunction()
-    returnResult.setString('I\'m sorry, I don\'t understand :)')
+    returnResult.setString('I\'m sorry, I don\'t understand {}'.format(emoji.slight_smile))
     return returnResult

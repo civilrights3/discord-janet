@@ -1,7 +1,7 @@
 import re
 import functionality as fn
 
-serverID = "600896271900737599"
+serverID = 600896271900737599
 
 def IsFromThisServer(message):
     if (message.guild.id == serverID):
@@ -11,7 +11,6 @@ def IsFromThisServer(message):
 
 
 def Interpret(message):
-    print('Interpreting chairman message')
     prettyMessage = message.clean_content
 
     # TODO: normalize message parsing. Remove pleasantries, normallize would/will.

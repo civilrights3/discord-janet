@@ -1,7 +1,7 @@
 import re
 import functionality as fn
 
-serverID = "331869022503174174"
+serverID = 331869022503174174
 
 def IsFromThisServer(message):
     if (message.guild.id == serverID):
@@ -11,7 +11,6 @@ def IsFromThisServer(message):
 
 
 def Interpret(message):
-    print('Interpreting civil message')
     prettyMessage = message.clean_content
 
     giveawayRegex = r"@Janet (please )?start the giveaway([.])?"
